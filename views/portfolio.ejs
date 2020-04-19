@@ -1,0 +1,38 @@
+<%- include("header"); -%>
+<%- include("nav"); -%>
+
+<% for (let i=0; i<posts.length; i++) { %>
+  <section>
+    <%- include('posts', {post: posts[i], index: i}); -%>
+  </section>
+<% } // close forloop %>
+
+
+<div class="hal">
+  <img class="een" src="/images/1.jpg" alt="" width="19%" data-category="2018"/>
+  <img class="twee" src="/images/2.jpg" alt="" width="19%" data-category="2015"/>
+  <img class="drie" src="/images/3.jpg" alt="" width="19%" data-category="2012"/>
+  <img class="vier" src="/images/4.jpg" alt="" width="19%" data-category="2019"/>
+  <img class="vijf" src="/images/5.jpg" alt="" width="19%" data-category="2019"/>
+  <img class="zes" src="/images/6.jpg" alt="" width="19%" data-category="2015"/>
+  <img class="zeven" src="/images/7.jpg" alt="" width="19%" data-category="2017"/>
+  <img class="acht" src="/images/8.jpg" alt="" width="19%" data-category="2018"/>
+  <img class="negen" src="/images/10.jpg" alt="" width="19%" data-category="2019"/>
+  <img class="tien" src="/images/9.jpg" alt="" width="19%" data-category="2017"/>
+</div>
+
+
+
+<div class="button-group filters-button-group">
+  <button class="button is-checked" data-filter="*">2012</button>
+  <button class="button" data-filter=".2015">2015</button>
+  <button class="button" data-filter=".2017">2017</button>
+  <button class="button" data-filter=".2018">2018</button>
+  <button class="button" data-filter=".2019">2019</button>
+</div>
+
+
+
+<script src="isotope.js"></script>
+<script src="script.js"></script>
+<%- include("footer"); -%>

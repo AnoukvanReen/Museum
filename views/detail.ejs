@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+<nav>
+  <ul>
+    <li><a class= "back" href="/portfolio">BACK</a></li>
+  </ul>
+</nav>
+<article>
+  <h1><%=post.title %></h1>
+  <% for(let t=0; t<post.tags.length; t++) { %>
+    <span><%=post.tags[t] %></span>
+  <% } // end forloop %>
+  <date><%=post.date %></date>
+  <p><%=post.content %></p>
+  <img><%post.image %></img>
+  <address class="author"><%=post.author %></address>
+</article>
+
+<%- include('footer'); -%>
